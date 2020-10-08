@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>calculator.com</title>
+<style>
+.c{background-color:black;
+color:white;
+width:100px;
+height:50px;
+border-radius:50%;
+font-size:20;
+
+}
+.c1{
+background-color:green;
+shadow:none;
+color:white;
+width:100px;
+height:50px;
+border-radius:50px;
+font-size:30;
+}
+#zr{
+background-color:gray;
+width:200px;
+height:50px;
+border-radius:40%;
+font-size:20;
+
+}
+#inp{
+background-color:gray;
+width:400px;
+height:50px;
+border-radius:5%;
+text-align:right;
+font-size:30;
+}
+.c2{
+background-color:green;
+width:100px;
+height:50px;
+border-radius:50%;
+font-size:30;
+
+}
+.de{
+background-color:gray;
+width:100px;
+height:50px;
+border-radius:50%;
+font-size:30;
+}
+table{position:relative;
+top:200px;
+border-color:red;
+background-color:pink;
+border-radius:4%;
+border:4px solid red;
+
+
+
+}
+</style>
+</head>
+<body bgcolor="black" >
+   <table align="center" > <tr><td> <form name="f">
+       <input type="text" name="i1"  id="inp"></input><br>
+	    <input type="button" value="C" class="c2" name="ic" onclick="Cleanup()"></input>
+		 <input type="button" value=+/- class="c2"  name="ic2" onclick="display(ic2.value)"></input>
+		  <input type="button" value="cl" class="c2"  name="ic3" onclick="cancle(i1.value,i2.value)"></input>
+		   <input type="button" value=/ class="c2"   name="div" onclick="display(div.value)"></input><br>
+       <input type="button" value=7 class="c" name="i2" onclick="display(i2.value)"></input>
+	    <input type="button" value=8 class="c" name="i3" onclick="display(i3.value)"></input>
+		 <input type="button" value=9 class="c" name="i4" onclick="display(i4.value)"></input>
+		  <input type="button" value=* class="c1" name="multi" onclick="display(multi.value)"></input><br>
+		  <input type="button" value=4 class="c" name="i5" onclick="display(i5.value)"></input>
+		   <input type="button" value=5 class="c" name="i6" onclick="display(i6.value)"></input>
+		    <input type="button" value=6 class="c" name="i7" onclick="display(i7.value)"></input>
+			 <input type="button" value=- class="c1" name="sub" onclick="display(sub.value)"></input><br>
+			 <input type="button" value=1 class="c" name="i8" onclick="display(i8.value)"></input>
+			  <input type="button" value=2 class="c" name="i9" onclick="display(i9.value)"></input>
+			   <input type="button" value=3 class="c" name="i10" onclick="display(i10.value)"></input>
+			    <input type="button" value=+ class="c1" name="sum" onclick="display(sum.value)"></input><br>
+				 <input type="button" value=0 id="zr" name="zero" onclick="display(zero.value)"></input>
+				  <input type="button" value=. class="de" name="dot" onclick="display(dot.value)"></input>
+				  <input type="button" value="=" class="de" name="equal" onclick="equal2()"></input>
+
+       </form></td></tr></table>
+</body>
+</html>
+<script language=javascript>
+
+function Cleanup(){
+f.i1.value="";
+}
+function display(n){
+f.i1.value=f.i1.value+n;
+}
+function equal2(){
+f.i1.value=eval(f.i1.value);
+
+}
+</script>
